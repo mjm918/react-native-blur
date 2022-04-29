@@ -39,6 +39,7 @@ class BlurViewManager extends ViewGroupManager<BlurView> {
             .setFrameClearDrawable(windowBackground)
             .setBlurAlgorithm(new RenderScriptBlur(ctx))
             .setBlurRadius(defaultRadius)
+            .setBlurAutoUpdate(false)
             .setHasFixedTransformationMatrix(false);
         return blurView;
     }
