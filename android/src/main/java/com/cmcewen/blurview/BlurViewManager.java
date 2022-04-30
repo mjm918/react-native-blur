@@ -1,9 +1,12 @@
 package com.cmcewen.blurview;
 
+import Dimezis.BlurView.BlurView;
+import Dimezis.BlurView.RenderScriptBlur;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewGroupManager;
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
@@ -12,9 +15,6 @@ import com.facebook.react.uimanager.annotations.ReactProp;
 import java.util.Objects;
 
 import javax.annotation.Nonnull;
-
-import eightbitlab.com.blurview.BlurView;
-import eightbitlab.com.blurview.RenderScriptBlur;
 
 
 @SuppressWarnings("unused")
@@ -39,7 +39,7 @@ class BlurViewManager extends ViewGroupManager<BlurView> {
             .setFrameClearDrawable(windowBackground)
             .setBlurAlgorithm(new RenderScriptBlur(ctx))
             .setBlurRadius(defaultRadius)
-            .setBlurAutoUpdate(false)
+            .setBlurAutoUpdate(true)
             .setHasFixedTransformationMatrix(false);
         return blurView;
     }
